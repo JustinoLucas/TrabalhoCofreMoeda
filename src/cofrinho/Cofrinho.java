@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Cofrinho {
 
-    ArrayList<Moeda> dindin = new ArrayList<Moeda>(); // Lista de Array para o cofre
+    ArrayList<Moeda> dindin = new ArrayList<>(); // Lista de Array para o cofre
 
     public void adicionar(Moeda d) { // Metodo para adicionar moeda ao cofre
         dindin.add(d);
