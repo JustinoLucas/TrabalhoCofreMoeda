@@ -3,7 +3,7 @@ package cofrinho;
 // Lucas Justino Turatto - RU: 4726794 - UNINTER - Cadastro, Listagem e Remocão de Moedas em Cofrinho
 // https://github.com/JustinoLucas/TrabalhoCofreMoeda
 
-import java.util.Scanner;  // Import da biblioteca para scanear uma tecla
+import java.util.Scanner;  // Import da biblioteca para scanear um dado de entrada
 
 public class Main {  // Classe Main
 
