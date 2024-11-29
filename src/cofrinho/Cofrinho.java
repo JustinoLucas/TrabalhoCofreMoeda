@@ -1,8 +1,8 @@
 package cofrinho;
 
-import java.util.ArrayList;
+import java.util.ArrayList;  // Import da biblioteca ArrayListe
 
-public class Cofrinho {
+public class Cofrinho { // Metodo Cofrinho
 
     ArrayList<Moeda> dindin = new ArrayList<>(); // Lista de Array para o cofre
 
@@ -12,7 +12,7 @@ public class Cofrinho {
 
     public void remover(String nomeTipo, double valor2) { // Metodo para remover moeda do cofre
         Moeda moedaRemove = null;
-        final double EPSILON = 0.0001; // Margem de erro para comparação de doubles
+        final double TOLERANCIA = 0.0001; // Margem de erro para comparação de doubles
         for (Moeda moeda : dindin) {
             if (moeda.info().equalsIgnoreCase(nomeTipo)) {  // Verifica o tipo da moeda com a do array
                 moedaRemove = moeda;
@@ -23,7 +23,8 @@ public class Cofrinho {
             if (moedaRemove.valor >= valor2) {
                 moedaRemove.valor -= valor2; // Subtrai o valor
                 System.out.println("Removidos " + valor2 + " de " + nomeTipo + ".");
-                if (Math.abs(moedaRemove.valor) < EPSILON) {
+                if (Math.abs(moedaRemove.valor) < TOLERANCIA) { //  Obtém o valor absoluto da moeda "< TOLERANCIA" Verifica se o valor absoluto está dentro de uma margem de tolerância (praticamente zero)
+                                                                //  É uma prática comum para evitar problemas com números de ponto flutuante devido à precisão limitada
                     dindin.remove(moedaRemove); // Remove a moeda se o valor restante for zero
                     System.out.println(nomeTipo + " removido do cofrinho (saldo zerado).");
                 }
